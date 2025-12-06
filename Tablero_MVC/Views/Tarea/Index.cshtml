@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Tablero_MVC.Models.Tarea>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet" type="text/css" href="/css/tarea.css">
+<h1>Mis tareas</h1>
+
+
+    <div class="boton">
+        <p>
+            <a asp-action="Create">Crear nueva</a>
+        </p>
+    </div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoTarea)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EstadoTarea)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descripcion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titulo)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IDTarea">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.IDTarea">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IDTarea">Borrar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

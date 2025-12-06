@@ -1,0 +1,45 @@
+﻿/*agrego hoja de estilos para el Home*/
+/*Modifique la letra y le baje el tono al color*/
+
+/*perdon Gi, saqué el fondo de color y agregué una imágen*/
+
+body {
+    font-family: Cambria, cursive;
+    /*  background-color: #6cbd11;*/
+    text-align: center;
+    background-image: url("https://images.pexels.com/photos/5208348/pexels-photo-5208348.jpeg");
+    background-size: cover;
+    /*agrego alineacion*/
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/*#00ff90*/
+h1 {
+    color: #0094ff;
+}
+/*
+p {
+    color: #3f3939;
+    font-size: 18px;
+    line-height: 1.5;
+
+    cambio tamanio, color, font...
+}*/
+p {
+    color: #a6a1b1f2;
+    font-size: 20px;
+    line-height: 1.8;
+    font-family: Calibri, cursive;
+}
+
+/*adios fondo violeta del container*/
+.container {
+    /*background-color: #ca2ac3;*/
+    border-radius: 10px;
+    margin: 100px auto;
+    padding: 20px;
+    width: 500px;
+}
+
+
+/*#fd5ee7*/

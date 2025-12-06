@@ -1,0 +1,34 @@
+﻿
+@model IEnumerable<Tablero_MVC.Models.Tablero>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet" type="text/css" href="/css/tablero.css">
+@*agregue estilos, hay que revisar el de 'boton'*@
+<div class="titulo">
+    <p>Comenzar</p>
+</div>
+    <div class="boton">
+        <p>
+           <a asp-action="Create">Aquí</a>
+        </p>
+    </div>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IDTablero">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IDTablero">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IDTablero">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
